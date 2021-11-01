@@ -11,6 +11,5 @@
 </head>
 <body>
 <h3>메인 화면</h3>
-장아린 수정dd
 </body>
 </html>
