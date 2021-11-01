@@ -11,10 +11,6 @@
 </head>
 <body>
 <h3>메인 화면</h3>
-tetetetete
-tetetete
-tetetet
-tete
-te
+commit?
 </body>
 </html>
