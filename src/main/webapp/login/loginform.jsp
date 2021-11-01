@@ -47,6 +47,8 @@ if(saveok!=null)
          <tr>
            <td colspan="2" align="center">
              <button type="submit" class="btn btn-success" style="width: 100px;">로그인</button>
+             <button type="button" class="btn btn-success" style="width: 100px;"
+			 onclick="location.href='index.jsp?main=member/memberform.jsp'">회원가입</button>
            </td>
          </tr>
     </table>

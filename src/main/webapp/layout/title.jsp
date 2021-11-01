@@ -1,3 +1,4 @@
+<%@page import="data.dao.UserDao"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
@@ -17,5 +18,4 @@ String root = request.getContextPath();
 <a href="<%=root%>/index.jsp">
 <h2>Apple Store</h2>
 
-</body>
 </html>

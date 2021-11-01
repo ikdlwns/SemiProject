@@ -1,4 +1,4 @@
-<%@page import="data.dao.MemberDao"%>
+<%@page import="data.dao.UserDao"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ String id=request.getParameter("id");
 String pass=request.getParameter("pass");
 String cbsave=request.getParameter("cbsave"); //체크안하면 null
 
-MemberDao dao=new MemberDao();
+UserDao dao=new UserDao();
 
 boolean b=dao.isIdPass(id, pass);
 
@@ -37,7 +37,8 @@ if(b){
 	
 	//로그인메인으로 이동
 	response.sendRedirect("../index.jsp?main=login/loginmain.jsp");
-}else{%>
+}else{
+%>
 	<script type="text/javascript">
 	  alert("아이디 또는 비밀번호가 맞지 않네요~~");
 	  history.back();

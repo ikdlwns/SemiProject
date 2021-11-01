@@ -1,4 +1,4 @@
-<%@page import="data.dao.MemberDao"%>
+<%@page import="data.dao.UserDao"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
@@ -17,19 +17,26 @@
 	<img alt="" src="image/mainImg.png" width="200" align="left" hspace="20">
 	
 	<%
-	//세션으로 아이디를 얻는다
-	String myid=(String)session.getAttribute("myid");
-	
-	//db로부터 아이디에 해당하는 이름을 얻는다.
-	MemberDao dao=new MemberDao();
-	String name=dao.getName(myid);
-	%>
+		//세션으로 아이디를 얻는다
+			String myid=(String)session.getAttribute("myid");
+			
+			//db로부터 아이디에 해당하는 이름을 얻는다.
+			UserDao dao=new UserDao();
+			String name=dao.getName(myid);
+		%>
 	<br><br>
 	<b><%=name %>님이 로그인 하셨습니다.</b><br><br><br>
 	
 	<button type="button" class="btn btn-danger" style="width:100px;"
 	onclick="location.href='login/logoutaction.jsp'">로그아웃</button>
+	<br><br>
+	<button type="button" class="btn btn-default" style="width:100px;"
+	onclick="location.href='member/updateform.jsp'">정보조회(X)</button>
+	<br><br>
+	<button type="button" class="btn btn-info" style="width:100px;"
+	onclick="location.href='member/updateform.jsp'">정보수정(X)</button>
+	
 </div>
 </body>
 </html>
-"src/main/webapp/login/logoutform.jsp"
+

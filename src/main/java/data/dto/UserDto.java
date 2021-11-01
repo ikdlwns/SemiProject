@@ -2,17 +2,23 @@ package data.dto;
 
 import java.sql.Timestamp;
 
-public class MemberDto {
-
+public class UserDto {
+	
+	private String user_name;
 	private String user_id;
 	private String user_pw;
-	private String user_name;
 	private String user_hp;
 	private String user_addr;
-	private Timestamp user_joinday;
 	private int user_point;
 	private String is_admin;
+	private Timestamp user_joinday;
 	
+	public String getUser_name() {
+		return user_name;
+	}
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
+	}
 	public String getUser_id() {
 		return user_id;
 	}
@@ -24,12 +30,6 @@ public class MemberDto {
 	}
 	public void setUser_pw(String user_pw) {
 		this.user_pw = user_pw;
-	}
-	public String getUser_name() {
-		return user_name;
-	}
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
 	}
 	public String getUser_hp() {
 		return user_hp;
@@ -43,12 +43,6 @@ public class MemberDto {
 	public void setUser_addr(String user_addr) {
 		this.user_addr = user_addr;
 	}
-	public Timestamp getUser_joinday() {
-		return user_joinday;
-	}
-	public void setUser_joinday(Timestamp user_joinday) {
-		this.user_joinday = user_joinday;
-	}
 	public int getUser_point() {
 		return user_point;
 	}
@@ -61,8 +55,13 @@ public class MemberDto {
 	public void setIs_admin(String is_admin) {
 		this.is_admin = is_admin;
 	}
+	public Timestamp getUser_joinday() {
+		return user_joinday;
+	}
+	public void setUser_joinday(Timestamp user_joinday) {
+		this.user_joinday = user_joinday;
+	}
+	
 
-	
-	
-	
+
 }
